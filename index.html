@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Basic Use Of Post JavaScript Ajax</title>
+
+</head>
+<body> 
+ 
+    <h1>Basic Use Of Post JavaScript Ajax</h2> 
+    <span id="serverResponse"></span> 
+ 
+</body> 
+</html> 
+ 
+<script> 
+    const xhr = new XMLHttpRequest(); 
+ 
+    xhr.onload = function () { 
+        const serverResponse = document.getElementById('serverResponse'); 
+        serverResponse.innerHTML = this.responseText; 
+    }; 
+ 
+    xhr.open("POST", "dom.php"); 
+    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
+    xhr.send("name=trisna&message=hallo world !"); 
+ 
+    console.log(xhr); 
+</script> 
