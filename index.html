@@ -24,7 +24,9 @@
         serverResponse.innerHTML = this.responseText; 
     }; 
  
-    xhr.open("POST", "dom.php"); 
+    xhr.open("POST", "dom.php");      
+
+    // there must be
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); 
     xhr.send("name=trisna&message=hallo world !"); 
  
